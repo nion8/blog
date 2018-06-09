@@ -5,6 +5,11 @@
     <div class="col-sm12">
 
       <%= form_for :contact, url: contacts_path do |f|  %>
+        <% if @contact %>
+          <p>
+            <%= @contact.errors.full_messages  %>
+          </p>
+        <% end %>
         <p>
           Почта <br>
           <%= f.text_field :email %>
