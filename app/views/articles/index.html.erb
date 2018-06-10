@@ -1,0 +1,15 @@
+<h1 class="text-center my-4">Список статей</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <% @article.each do |article| %>
+        <h2>
+          <%= article.title %></h2>
+        <p>
+          <%= article.text %></p>
+        <hr>
+
+      <% end %>
+    </div>
+  </div>
+</div>
