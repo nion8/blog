@@ -7,6 +7,10 @@
           <%= article.title %></h2>
         <p>
           <%= article.text %></p>
+        <p><%= link_to 'Читать', article_path(article) %> |
+          <%= link_to 'редактировать', edit_article_path(article) %>
+
+        </p>
         <hr>
 
       <% end %>
