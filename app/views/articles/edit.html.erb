@@ -1,10 +1,10 @@
-<h1 class="text-center my-4"> Новая статья</h1>
+<h1 class="text-center my-4"> Редактировать статью</h1>
 
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
 
-      <%= form_for :article, url: articles_path do |f|  %>
+      <%= form_for :article, url: article_path(@article), method: :put do |f| %>
 
         <p>
           Title <br>
