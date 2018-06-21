@@ -6,13 +6,13 @@
 
 <% @article.comments.each do |comment| %>
   <p>
- <i><%= comment.autor %> сказал</i> <br> </p>
+    <i><%= comment.autor %> сказал</i> <br></p>
   <%= comment.body %>
 <% end %>
 
 <h2>добавить комментарий</h2>
 <p>
-  <%= form_for([@article, @article.comments.build])  do |f| %>
+  <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
     Автор <br>
     <%= f.text_field :autor %>
@@ -24,5 +24,6 @@
   <p>
     <%= f.submit %>
   </p>
+  <p><%= Time.now %></p>
 
 <% end %>
