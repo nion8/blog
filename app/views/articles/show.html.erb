@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-<p>
+<p class="lead p_bang p-3">
   <%= @article.text %>
 </p>
 <h2>Комментарий</h2>
@@ -14,7 +14,7 @@
   <%= comment.body %>
 <% end %>
 
-<h2>добавить комментарий</h2>
+<h3>добавить комментарий</h3>
 <p>
   <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
