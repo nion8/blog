@@ -1,4 +1,8 @@
-<h1><%= @article.title %></h1>
+<h1 class="text-center"><%= @article.title %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
 <p>
   <%= @article.text %>
 </p>
@@ -27,3 +31,6 @@
   <p><%= Time.now %></p>
 
 <% end %>
+      </div>
+  </div>
+</div>
