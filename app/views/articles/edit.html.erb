@@ -1,22 +1,18 @@
 <h1 class="text-center my-4"> Редактировать статью</h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
 
-      <%= form_for :article, url: article_path(@article), method: :put do |f| %>
 
-       <div class="form-group">
-           <%= f.label :Заголовок %>
-          <%= f.text_field :title, class: 'form-control'  %>
+<%= form_for :article, url: article_path(@article), method: :put do |f| %>
 
-         <%= f.label :Текст %>
-          <%= f.text_area :text, class: 'form-control'  %>
+  <div class="form-group">
+    <%= f.label :Заголовок %>
+    <%= f.text_field :title, class: 'form-control' %>
 
-       </div>
-          <%= f.submit 'Сохранить', class: 'btn-success' %>
+    <%= f.label :Текст %>
+    <%= f.text_area :text, class: 'form-control' %>
 
-      <% end %>
-    </div>
   </div>
-</div>
+  <%= f.submit 'Сохранить', class: 'btn-success' %>
+
+<% end %>
+   
