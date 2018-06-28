@@ -20,6 +20,7 @@
     <ul class="navbar-nav mr-3">
     <li class="nav-item">
       <% if user_signed_in? %>
+        <%= current_user.email %>
         <a class="nav-link" <%= link_to "Выход", destroy_user_session_path , method: :delete %></a>
       <% else %>
     </li>
